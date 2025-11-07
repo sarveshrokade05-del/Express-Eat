@@ -1,0 +1,192 @@
+/* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fffdfb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navigation Bar ===== */
+.nav-bar {
+  display: flex;
+    background-color:#ff7f50;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.brand-name {
+  height: 60px;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu-bar ul li a:hover {
+  color: #2c2c2c;
+}
+
+/* Hamburger Menu (for mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* ===== About Section ===== */
+.about {
+  padding: 4rem 10%;
+  background-color: #fffaf5;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-content {
+  flex: 1 1 500px;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  color: #ff7f50;
+  margin-bottom: 0.5rem;
+}
+
+.about-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+/* Image Section */
+.img-me {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.img-me img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+  margin-top: 6rem;
+}
+
+.footer .social-btn {
+  margin-bottom: 1rem;
+}
+
+.footer .social-btn a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-btn a:hover {
+  color: #ff7f50;
+}
+
+.footer .quick-bar {
+  margin-bottom: 1rem;
+}
+
+.footer .quick-bar a {
+  color: #ff7f50;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .quick-bar a:hover {
+  color: white;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .menu-bar ul {
+    flex-direction: column;
+    background-color: #ff7f50;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .menu-bar ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .about-content h1 {
+    text-align: center;
+  }
+
+  .about-content p {
+    text-align: left;
+  }
+}
